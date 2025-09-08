@@ -29,6 +29,10 @@ jobs:
         pip install --upgrade pip
         pip install scikit-learn mlflow
 
+    - name: Display contents of training script for debugging
+      working-directory: ./mlops-project-2
+      run: cat train_mlflow.py    
+
     # Step 4: Run the MLflow training script
     - name: Run training script
       working-directory: ./mlops-project-2
