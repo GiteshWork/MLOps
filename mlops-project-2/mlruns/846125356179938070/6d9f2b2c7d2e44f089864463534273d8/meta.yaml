@@ -1,0 +1,14 @@
+artifact_uri: file:///home/gitesh/MlOps/mlops-project-2/mlruns/846125356179938070/6d9f2b2c7d2e44f089864463534273d8/artifacts
+end_time: 1757318797567
+entry_point_name: ''
+experiment_id: '846125356179938070'
+lifecycle_stage: active
+run_id: 6d9f2b2c7d2e44f089864463534273d8
+run_name: peaceful-snail-839
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757318795753
+status: 3
+tags: []
+user_id: gitesh

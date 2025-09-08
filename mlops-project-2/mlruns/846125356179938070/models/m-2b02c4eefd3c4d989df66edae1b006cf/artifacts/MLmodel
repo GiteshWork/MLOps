@@ -1,0 +1,22 @@
+artifact_path: file:///home/gitesh/MlOps/mlops-project-2/mlruns/846125356179938070/models/m-2b02c4eefd3c4d989df66edae1b006cf/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+mlflow_version: 3.3.2
+model_id: m-2b02c4eefd3c4d989df66edae1b006cf
+model_size_bytes: 177230
+model_uuid: m-2b02c4eefd3c4d989df66edae1b006cf
+prompts: null
+run_id: 029dd60aee124297a8cd262818812b41
+utc_time_created: '2025-09-08 05:44:05.120694'

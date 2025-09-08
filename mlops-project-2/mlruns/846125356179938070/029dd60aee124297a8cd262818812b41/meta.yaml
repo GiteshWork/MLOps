@@ -1,0 +1,14 @@
+artifact_uri: file:///home/gitesh/MlOps/mlops-project-2/mlruns/846125356179938070/029dd60aee124297a8cd262818812b41/artifacts
+end_time: 1757310246761
+entry_point_name: ''
+experiment_id: '846125356179938070'
+lifecycle_stage: active
+run_id: 029dd60aee124297a8cd262818812b41
+run_name: marvelous-wolf-882
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757310245027
+status: 3
+tags: []
+user_id: gitesh

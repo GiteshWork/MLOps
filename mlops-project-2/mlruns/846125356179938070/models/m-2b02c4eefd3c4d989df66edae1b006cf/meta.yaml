@@ -1,0 +1,10 @@
+artifact_location: file:///home/gitesh/MlOps/mlops-project-2/mlruns/846125356179938070/models/m-2b02c4eefd3c4d989df66edae1b006cf/artifacts
+creation_timestamp: 1757310245117
+experiment_id: '846125356179938070'
+last_updated_timestamp: 1757310246760
+model_id: m-2b02c4eefd3c4d989df66edae1b006cf
+model_type: null
+name: model
+source_run_id: 029dd60aee124297a8cd262818812b41
+status: 2
+status_message: null
