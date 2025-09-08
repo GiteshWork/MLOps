@@ -31,6 +31,7 @@ jobs:
 
     # Step 4: Run the MLflow training script
     - name: Run training script
+      working-directory: ./mlops-project-2
       run: python3 train_mlflow.py
 
     # Step 5: Commit the results back to the repository
