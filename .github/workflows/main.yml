@@ -47,8 +47,8 @@ jobs:
     # In a real project, we'd use a remote MLflow server.
     - name: Commit mlruns directory
       run: |
-        git config --global GiteshWork 'github-actions'
-        git config --global work.giteshpradhan@gmail.com 'github-actions@github.com'
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
         git add mlruns
         # The following command only commits if there are changes
         git commit -m "Log new MLflow run results" || echo "No changes to commit"
