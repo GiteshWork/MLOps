@@ -23,6 +23,10 @@ jobs:
       with:
         python-version: '3.9'
 
+    - name: Clear existing mlruns directory
+      working-directory: ./mlops-project-2
+      run: rm -rf mlruns    
+
     # Step 3: Install Python dependencies
     - name: Install dependencies
       run: |
