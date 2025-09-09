@@ -1,4 +1,4 @@
 [core]
     remote = myremote
 ['remote "myremote"']
-    url = /tmp/dvc-storage
+    url = s3://aws-dvc-2025
