@@ -1,4 +1,4 @@
-name: DVC Model Training Pipeline
+name: DVC Model Training and Deployment Pipeline
 
 on:
   push:
@@ -10,7 +10,6 @@ jobs:
     defaults:
       run:
         working-directory: ./mlops-project-3
-
     steps:
     - name: Check out repository
       uses: actions/checkout@v4
@@ -33,3 +32,42 @@ jobs:
 
     - name: Run training script
       run: python3 train.py
+
+    - name: Upload MLflow results
+      uses: actions/upload-artifact@v4
+      with:
+        name: mlruns
+        path: mlops-project-3/mlruns
+
+  deploy-model:
+    needs: train-model
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./mlops-project-3
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.9'
+
+    - name: Download MLflow results
+      uses: actions/download-artifact@v4
+      with:
+        name: mlruns
+        path: mlops-project-3/mlruns
+
+    - name: Install dependencies
+      run: pip install mlflow boto3 GitPython PyYAML
+
+    - name: Run Deployment Script
+      env:
+        S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+        GITOPS_REPO_URL: "https://github.com/GiteshWork/mlops-project-4-gitops.git"
+        GITOPS_PAT: ${{ secrets.GITOPS_PAT }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: python3 deploy.py

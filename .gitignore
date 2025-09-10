@@ -1,0 +1,53 @@
+General OS and Editor specific files
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+Python virtual environments and cache
+venv/
+env/
+kserve_env/
+pycache/
+*.pyc
+
+Python build artifacts
+build/
+dist/
+*.egg-info/
+
+--- Terraform ---
+Never commit Terraform state files. They contain sensitive information.
+*.tfstate
+*.tfstate.backup
+
+Local Terraform directories and plans
+.terraform/
+
+.terraform.lock.hcl should be committed to version control, so it is NOT ignored.
+crash.log
+*.tfplan
+
+--- DVC ---
+The DVC cache contains the actual large data files.
+.dvc/cache
+.dvc/tmp
+
+The data file itself, which is tracked by DVC, not Git.
+DVC may have added this to a .gitignore in the 'data' folder,
+but it's good practice to have it here too.
+mlops-project-3/data/iris.csv
+
+--- MLflow ---
+The local experiment tracking directory. This should not be committed.
+In a real project, this data would be on a remote server.
+mlruns/
+
+--- Project-Specific Dependencies & Tools ---
+Downloaded tools like Istio should not be in the repository.
+istio-*/
+
+--- Secrets and Credentials ---
+Any files containing secrets must be ignored.
+aws-secret.env
